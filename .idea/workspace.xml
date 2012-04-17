@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d34f251-9f4a-433e-af0a-f15c779709da" name="Default" comment="" />
+    <list default="true" id="8d34f251-9f4a-433e-af0a-f15c779709da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlashCards/accounts/views.py" afterPath="$PROJECT_DIR$/FlashCards/accounts/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlashCards/flash.db" afterPath="$PROJECT_DIR$/FlashCards/flash.db" />
+    </list>
     <ignored path="bin.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,13 +61,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FlashCards/apps/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-0.0609319">
+            <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FlashCards/accounts/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="39" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FlashCards/accounts/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.09139785">
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../contrib/auth/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="207" column="14" selection-start="8793" selection-end="8803" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,7 +129,6 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/FlashCards/urls.py" />
         <option value="$PROJECT_DIR$/FlashCards/settings.py" />
-        <option value="$PROJECT_DIR$/FlashCards/accounts/views.py" />
         <option value="$PROJECT_DIR$/FlashCards/accounts/models.py" />
         <option value="$PROJECT_DIR$/FlashCards/main/views.py" />
         <option value="$PROJECT_DIR$/FlashCards/templates/base_home.html" />
@@ -103,6 +137,7 @@
         <option value="$PROJECT_DIR$/FlashCards/apps/admin.py" />
         <option value="$PROJECT_DIR$/FlashCards/templates/apps/add_edit_form.html" />
         <option value="$PROJECT_DIR$/FlashCards/apps/views.py" />
+        <option value="$PROJECT_DIR$/FlashCards/accounts/views.py" />
       </list>
     </option>
   </component>
@@ -221,6 +256,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FlashCards" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -549,31 +602,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="6" selection-start="8437" selection-end="8437" vertical-scroll-proportion="0.33211008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FlashCards/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.13934426">
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FlashCards/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="12" selection-start="2134" selection-end="2134" vertical-scroll-proportion="0.33333334">
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FlashCards/accounts/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -668,7 +696,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FlashCards/apps/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-0.0609319">
+        <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="14" selection-start="8793" selection-end="8803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FlashCards/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="39" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FlashCards/accounts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.09139785">
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
