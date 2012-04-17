@@ -1,0 +1,21 @@
+{% extends "base_index.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+{% if user.username %}
+<p>You already login</p>
+<p>Return the <a href="/">main page</a></p>
+{% else %}
+<div class='homebox'>
+    <form method="post" action="." class='inform'> {% csrf_token %}
+        <div class='table inform inhelp'>
+            {% include 'forms.html' %}
+            <div class="row alt submit">
+                <div class="name"> </div>
+                <div class="field"> <input class="submit" type="submit" value="Create Account »" /></div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endif %}
+{% endblock %}

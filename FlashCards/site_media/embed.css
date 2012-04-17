@@ -1,0 +1,241 @@
+
+/* Copyright Study Bulb */
+
+
+#studybulb {
+	display:block;
+	font-family:Verdana;
+	font-size:10pt;
+	line-height:100%;
+	width:660px;
+	padding:5px;
+	border:1px solid rgb(213,213,213);
+	background:rgb(240,240,240);
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+#studybulb a {
+	text-decoration:none;
+	color:rgb(0,0,213);
+}
+
+#studybulb img {
+	border:0;
+}
+
+#itemtabs {
+	display:block;
+	width:100%;
+	height:23px;
+}
+
+
+#itemtabs a {
+	display:block;
+	float:left;
+	border-width: 1px 1px 0 0;
+	border-style: solid;
+	border-color: rgb(213,213,213); 
+	width:140px;
+	line-height:10px;
+	font-size:10px;
+	background:rgb(250,250,250);
+	text-align:center;
+	padding:6px 0;
+	margin-top:2px;
+}
+
+
+#itemtabs a.itemtab {
+	margin-top:0;
+	padding:7px 4px;
+	background:rgb(255,255,255);
+	width:150px;
+}
+
+
+#itemtabs a:hover {
+}
+
+
+
+table.flashcards {
+	font-family:Verdana;
+	width:660px;
+}
+
+table.flashcards td.main {
+	text-align:center;
+	padding:20px;
+	width:620px;
+	height:250px;
+	border:1px solid rgb(213,213,213);
+	font-size:14pt;
+	font-weight:bold;
+	font-family:Arial;
+	line-height:150%;
+	background:rgb(255,255,255);
+}
+
+table.flashcards a#prev,
+table.flashcards a#next,
+table.flashcards a#answerbutton {
+	display:block;
+	float:left;
+	font-size:14pt;
+	font-weight:bold;
+	padding:18px 0;
+	text-align:center;
+	border:1px solid rgb(213,213,213);
+	background:rgb(255,255,255);
+	font-family:Arial;
+}
+
+
+table.flashcards a#prev {
+	width:169px;
+	margin:2px 2px 0 0;
+}
+
+table.flashcards a#next {
+	width:169px;
+	margin:2px 0 0 2px;
+}
+
+table.flashcards a#answerbutton {
+	width:308px;
+	margin-top:2px;
+}
+
+
+
+
+
+table.multi {
+	width:660px;
+	text-align:left;
+	border:1px solid rgb(213,213,213);
+	font-size:14pt;
+	font-weight:bold;
+	vertical-align:top;	
+	background:rgb(255,255,255);
+	height:300px;
+
+}
+
+table.multi #question {
+	font-size:14pt;
+	line-height:200%;
+	font-weight:bold;
+	padding:20px 60px 10px 60px;
+}
+
+table.multi #answers {
+	line-height:200%;
+	font-weight:bold;
+	font-size:12pt;
+	padding:0 60px 10px 60px;
+}
+
+table.multi #status {
+	line-height:200%;
+	font-weight:bold;
+	font-size:12pt;
+	padding:0 60px 20px 60px;
+}
+
+
+
+
+table.matching {
+	width:660px;
+	border:1px solid rgb(213,213,213);
+	background:rgb(255,255,255);
+}
+
+table.matching td  {
+	height:50px;
+	line-height:175%;
+	border-bottom:1px solid rgb(213,213,213);
+	font-size:8pt;
+}
+
+table.matching td.q {
+	width:61%;
+	padding:0 10px 0 30px;
+}
+
+table.matching td.m {
+	padding:0;
+	text-align:center;
+	vertical-align:middle;
+	width:9%;
+}
+
+table.matching td.a {
+	width:30%;
+	padding:0 30px 0 10px;
+}
+
+
+
+table.matching td.m img {
+	margin:1px;
+}
+
+
+
+
+table.fillin {
+	text-align:center;
+	width:660px;
+	height:300px;
+}
+
+table.fillin #main {
+	text-align:left;
+	vertical-align:top;
+	padding:30px;
+	border:1px solid rgb(213,213,213);
+	font-size:14pt;
+	font-weight:bold;
+	line-height:150%;
+	background:rgb(255,255,255);
+}
+
+
+table.fillin input {
+	font-family:Verdana;
+	font-size:10pt;
+	padding:8px;
+	font-weight:bold;
+	border:1px solid rgb(213,213,213);
+	background:rgb(245,245,245);
+}
+
+
+table.fillin #asubmit {
+	background:rgb(255,255,255);
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+.big	{font-size:12pt;}
+.small	{font-size:8pt;}
+.mini	{font-size:10px;text-transform:uppercase;font-weight:normal;}
+.tiny	{font-size:10px;}
+.top	{vertical-align:top;}
+.right	{text-align:right;}
+.left	{text-align:left;}
+.center	{text-align:center;}
+.point	{cursor:pointer;}
+.bold	{font-weight:bold;}
+.italic	{font-style:italic;}
+

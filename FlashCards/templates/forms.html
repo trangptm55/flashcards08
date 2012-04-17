@@ -1,0 +1,25 @@
+<div class="toprow">
+    <div class="title">{{ title }}</div>
+</div>
+{% for field in form %}
+{% ifequal field.label form.remember.label %}
+<div class='row alt checkbox'>
+    <div class='name'></div>
+    <div class='field' style=''>{{ field }}
+    <label for='id_remember'>{{ field.label }}</label>
+    </div>
+</div>
+{% else %}
+<div class='row alt text {% if field.errors %}error{% endif %}'>
+    <div class='name'>{{ field.label }}</div>
+    <div class='field' style=''>{{ field }}</div>
+    <div class='help'>
+        {% if not field.errors %}
+        {{ field.help_text }}
+        {% else %}
+        {% for error in field.errors %}{{ error }}{% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endifequal %}
+{% endfor %}

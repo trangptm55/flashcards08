@@ -1,0 +1,30 @@
+{% extends "base_home.html" %}
+{% block main %}
+<h1><a href="/app/">Apps</a> &rsaquo; Flashcards</h1>
+
+<div class="tr">
+
+    <div class="sidetools sideup">
+        <img src="{{ STATIC_PREFIX }}i/user_128.gif" class="sidepic"/>
+        <div class="table">
+            <a href="/app/?app=lessons" class="row ">
+                <img src="{{ STATIC_PREFIX }}i/icons/page-web.png" class="upic"/>Allthink Lessons					</a>
+            <a href="/app/?app=quizzes" class="row ">
+                <img src="{{ STATIC_PREFIX }}i/icons/notepad-write.png" class="upic"/>Quizzes					</a>
+            <a href="/app/?app=flashcards" class="row  active">
+                <img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic"/>Flashcards					</a>
+            <a href="/app/?app=wikis" class="row ">
+                <img src="{{ STATIC_PREFIX }}i/icons/page-edit.png" class="upic"/>Wikis					</a>
+            <a href="/app/?app=files" class="row ">
+                <img src="{{ STATIC_PREFIX }}i/icons/link.png" class="upic"/>Files					</a>
+            <a href="/app/?app=rubrics" class="row ">
+                <img src="{{ STATIC_PREFIX }}i/icons/page-chart.png" class="upic"/>Rubrics					</a>
+        </div>
+    </div>
+
+    <div style="position:absolute;left:200px;top:90px;right:0;bottom:0;z-index:2">
+        <iframe src="/form/{{ para }}" id="appframe" border="0" frameborder="0"></iframe>
+    </div>
+
+</div>
+{% endblock %}

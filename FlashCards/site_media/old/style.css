@@ -1,0 +1,49 @@
+#nav {
+    height: 50px;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    background-image: url("header.jpg");
+    font-size: 20px;
+}
+
+input{
+    display: block;
+    width: 200px;
+}
+
+input.submit {
+    width: 200px;
+}
+
+.comment {
+    margin: 1em;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.required {
+    margin: 1em;
+    text-align: right;
+    font-size: small;
+    vertical-align:bottom;
+}
+
+.errorlist {
+    color: red;
+    text-align: left;
+    margin: 1px;
+}
+
+.edit {
+    font-size: 70%;
+}
+
+h1 {
+    color: #fff;
+}
+
+

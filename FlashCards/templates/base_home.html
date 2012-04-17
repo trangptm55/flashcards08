@@ -1,0 +1,91 @@
+{% spaceless %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<html>
+<head>
+    <title>Engrade - {{ head_title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}global.css" type="text/css" />
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}jquery-1.7.1.min.js"></script>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ STATIC_PREFIX }}favicon.ico" />
+    <script type="text/javascript">
+        $("a.like").bind("click", function(){
+            var link = $(this).attr("href");
+            document.write(link);
+            $.get(link, function(data) {
+                $(this).parent("div").children('b#likes').html(data);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id='wrapper' class='notranstale'>
+    <div id="navwrapper" class="notranslate">
+        <ul class="topnav" style="float: right;">
+            {% if user.is_authenticated %}
+            <li>
+                <a href="/user/?u={{ user.username }}" class="nav" style="color:rgb(213,213,240);">
+                    {{ name }}</a>
+            </li>
+            <li>
+                <a href="/accounts/logout" class="nav" style="color:rgb(213,213,240);">
+                    Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/accounts/register" class="nav" style="color:rgb(213,213,240);">
+                    Sign up</a>
+            </li>
+            <li>
+                <a href="/accounts/login" class="nav" style="color:rgb(213,213,240);">
+                    Login</a>
+            </li>
+            {% endif %}
+        </ul>
+
+        <a href="/" id="logo" class="gradebook" title="gradebook"><b>gradebook</b></a>
+
+        <ul class="topnav">
+            <li>
+                <a href="#" class="">Classes													</a>
+                <ul>
+                    <li><a href="#">Create New Class</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="">Messages													</a>
+            </li>
+            <li>
+                <a href="#" class="">Apps													</a>
+                <ul>
+                    <li><a href="#">Allthink Lessons</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Flashcards</a></li>
+                    <li><a href="#">Wikis</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/user/{{ user.username }}" class="">Account													</a>
+                <ul>
+                    <li><a href="#">Edit Account</a></li>
+                    <li><a href="#">Edit Picture</a></li>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">Schools</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="main" class="clearfix">
+        {% block main %}{% endblock %}
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
+{% endspaceless %}

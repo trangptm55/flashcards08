@@ -1,0 +1,50 @@
+{% extends "base_home.html" %}
+{% block main %}
+    <h1><a href="/flashcards">Flashcards</a> › {{ FC.title }}</h1>
+    <div class="tr lesson">
+
+        <div class="sidetools sideup">
+
+            <div class="table creator">
+                <div class="row">
+                    <a href="/user/?u={{ user.username }}"><img src="/i/user_128.gif" class="upic"></a>
+                    <a href="/user/?u={{ user.username }}" class="creator">{{ name }}</a>
+
+                    <div id="likewidget" class="likes ">
+                        <b id="likes" class="likecount">{{ like_no }}</b>
+                        {% if like %}<a class="like" href="/like/{{ id }}" onmouseover="this.innerHTML='Like this'" onmouseout="this.innerHTML='Likes'">Like{{ like_no|pluralize }}</a>
+                        {% else %}Like{{ like_no|pluralize }}{% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="table">
+                <div class="midrow">Options</div>
+                <a href="#" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/paste.png" class="upic"> Assign to Class</a>
+                <a href="#" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic"> Copy Flashcards</a>
+                <a href="/user/?id={{ FC.flashcard_id|escape }}&action=edit" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/setting.png" class="upic"> Edit Flashcards</a><br>
+                <a href="javascript:if (confirm('Are you sure you wish to delete these flashcards?'))
+                    window.location.replace('/form/?action=delete&id={{ FC.flashcard_id|escape }}&delete=1');void(0)" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/delete.png" class="upic"> Delete Flashcards</a>
+            </div>
+
+            <div class="table">
+                <a href="/user/?u={{ user.username }}" class="midrow">More from {{ name }}</a>
+                <a href="http://flashcards.engrade.com/test2100" class="row small active">
+                    <img src="/i/icons/copy.png" class="upic">
+                    Test2						</a>
+                <a href="http://flashcards.engrade.com/test2101" class="row small ">
+                    <img src="/i/icons/copy.png" class="upic">
+                    Test2						</a>
+            </div>
+        </div>
+
+
+
+        <div class="content">
+            <input type="hidden" id="hiddenprompt" name="variable" value="{{ p }}">
+            <input type="hidden" id="hiddenanswer" name="variable" value="{{ a }}">
+
+            <script type="text/javascript" src="/static/display.js"></script>
+        </div>
+    </div>
+{% endblock %}
