@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d34f251-9f4a-433e-af0a-f15c779709da" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\registration\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\registration\forms.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\registration\models.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\registration\tests.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\registration\views.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\base_main.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\js.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\js.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\registration\login.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\registration\register.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Python27\Lib\site-packages\django\bin\FlashCards\templates\registration\register_success.html" afterPath="" />
-    </list>
+    <list default="true" id="8d34f251-9f4a-433e-af0a-f15c779709da" name="Default" comment="" />
     <ignored path="bin.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +60,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FlashCards/apps/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="65" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.4874552">
+            <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-0.0609319">
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -680,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FlashCards/apps/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="65" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.4874552">
+        <state line="13" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-0.0609319">
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
