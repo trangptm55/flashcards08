@@ -1,0 +1,526 @@
+
+
+/********* SIDE TOOLS *********/
+
+.sidetools {
+	width:220px;
+}
+
+.content {
+	left:260px;
+	margin-bottom:30px;
+}
+
+
+.sidetools .table {
+	width:210px;
+	margin-bottom:20px;
+}
+
+.sidetools .msg_tip {
+	width:200px;
+	background:rgb(245,255,245);
+	border:1px solid rgb(213,213,213);
+}
+
+.sidetools .msg_tip a {
+	color:rgb(0,128,0);
+}
+
+.sidetools .table .toprow,
+.sidetools .table .midrow,
+.sidetools .table .row,
+.sidetools .table .smallrow {
+	width:200px;
+}
+
+.sidetools .table a.toprow:hover {
+	background:rgb(0,0,128);
+	color:rgb(255,255,255);
+}
+
+.sidetools .table .upic {
+	width:40px;
+	height:40px;
+	display:block;
+	float:left;
+}
+.sidetools .table.creator .row .upic {
+	width:40px;
+	height:40px;
+}
+
+.sidetools .table a.creator {
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding-bottom:7px;
+	width:150px;
+}
+
+.sidetools .table .likes {
+	display:block;
+	float:left;
+	width:150px;
+}
+.sidetools .table .likes a {
+}
+.sidetools .table .likes.liked {
+}
+.sidetools .table .likes.liked b {
+}
+
+.likecount {
+	font-weight:bold;
+	background:rgb(230,230,230);
+	padding:2px 5px;
+	color:rgb(85,85,85);
+}
+
+.sidetools .table .row .ops {
+	float:left;
+	text-align:left;
+}
+
+.sidetools .table a.edit {
+	color:rgb(85,0,255);
+	font-weight:bold;
+}
+
+h1 {
+	padding-left:260px;
+}
+
+
+.sidetools .table .sub .row {
+	font-size:12px;
+}
+
+
+.sidetools .table .sub .sub {
+}
+
+.sidetools .table .sub .sub .row {
+	padding-left:15px;
+	width:185px;
+	font-size:11px;
+	border:0;
+}
+
+.sidetools .table .sub .sub a.row {
+	color:rgb(0,128,170);
+}
+
+.sidetools .table .sub .sub .sub .row {
+	padding-left:30px;
+	width:170px;
+	font-size:10px;
+	border:0;
+}
+
+.sidetools .table .sub .sub .sub a.row {
+	color:rgb(0,128,170);
+}
+
+
+.sidetools .table .sub .sub .row.active {
+	background:rgb(230,245,255);
+}
+
+
+.sidetools .table .lopad {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.sidetools .table .midrow {
+	padding:7px 5px;
+}
+
+
+.sidetools div.creator {
+	border:1px solid rgb(230,230,230);
+}
+
+.sidetools div.creator div.row {
+	border:0;
+        cursor: auto;
+}
+
+
+
+
+
+/******** LESSONS ********/
+
+
+/*** CONTENT ***/
+
+
+.lesson .content h1 {
+	display:block;
+	background:none;
+	border:0;
+	height:auto;
+	color:rgb(0,0,0);
+	margin:0;
+	padding:0;
+	font-family:Arial;
+	font-size:20pt;
+	line-height:100%;
+
+}
+
+.lesson .content h2 {
+	display:block;
+	padding:13px 0;
+	text-indent:10px;
+	font-family:Arial;
+	font-size:18px;
+	line-height:18px;
+	background:rgb(245,245,245);
+	border:1px solid rgb(230,230,230);
+	color:rgb(85,85,85);
+}
+
+.lesson .content .sectionbody:after {
+	display:block;
+	clear:both;
+	content:' ';
+}
+
+.lesson .content .section {
+    position: relative;
+}
+
+
+.lesson .content .section .sectionbody {
+	margin:20px 40px 35px 0;
+	line-height:160%;
+	font-size:11pt;
+}
+
+.lesson .content h2.addsection {
+	width:230px;
+}
+
+.lesson .content .addsection a {
+	color:rgb(85,128,85);
+}
+
+.lesson .content .addsection:hover {
+	color:rgb(0,170,0);
+}
+
+
+
+
+
+
+
+/*** SECTION EDIT ***/
+
+.lesson .content .sectionedit {
+	margin-right:40px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+	z-index:2;
+}
+
+.lesson .content .sectionedit:after {
+	display:block;
+	clear:both;
+	content:' ';
+}
+
+
+.lesson .content .sectionedit a {
+	display:block;
+	float:right;
+	background:rgb(250,250,250);
+	border:1px solid rgb(200,200,200);
+	border-right:0;
+	font-size:8pt;
+	font-weight:bold;
+	color:rgb(160,170,170);
+	padding:6px 8px;
+}
+.lesson .content .sectionedit a:first-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    border-right:1px solid rgb(200,200,200);
+}
+.lesson .content .sectionedit a:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -moz-border-top-left-radius: 4px;
+    -moz-border-bottom-left-radius: 4px;
+}
+
+.lesson .content .sectionedit a:hover {
+	background:rgb(240,240,240);
+	color:rgb(0,0,170);
+}
+
+.lesson .content .sectionoff .sectionedit {
+	display:none;
+}
+
+#edittoggle {
+	float:right;
+	font-size:10px;
+	text-transform:uppercase;
+	color:rgb(0,128,0);
+	padding-right:10px;
+}
+
+
+
+
+
+/*** ADD SECTION FORMS ***/
+
+.lesson .content .inform,
+.lesson .content .inform .row,
+.lesson .content .inform .row div,
+.lesson .content .inform .toprow,
+.lesson .content .inform .midrow {
+	width:90%;
+	margin:0;
+	background:none;
+	border:none;
+}
+
+.lesson .content .inform {
+	padding:20px;
+}
+
+.lesson .content .inform .toprow {
+	font-size:20pt;
+	font-family:Arial;
+}
+
+.lesson .content .inform div.row .name {
+	font-size:8pt;
+	font-weight:bold;
+	padding:0 0 2px 0;
+}
+
+.lesson .content .inform .row .help {
+	padding:2px 0 0 0;
+}
+
+.lesson .content .inform .checkbox div {
+	font-size:10pt;
+}
+
+.lesson .content .inform .checkbox .name,
+.lesson .content .inform .checkbox .help,
+.lesson .content .inform .submit .name {
+	display:none;
+}
+
+
+.lesson .content select,
+.lesson .content input,
+.lesson .content textarea {
+	font-family:Verdana;
+	font-size:12pt;
+	line-height:160%;
+}
+
+.lesson .content h2 input {
+	font-size:14pt;
+	font-weight:bold;
+}
+
+.lesson .content .help {
+	font-size:8pt;
+	color:rgb(85,85,85);
+}
+
+.lesson .radiotext {
+	cursor:pointer;
+}
+
+
+
+
+
+
+/*** PREV/NEXT LINKS ***/
+
+div.prevnext {
+	color:rgb(128,128,128);
+	font-weight:bold;
+    padding-bottom: 10px;
+}
+
+div.prevnext .prev {
+	float:left;
+}
+
+div.prevnext .next {
+	float:right;
+}
+
+div.prevnext a,
+div.prevnext span {
+    display: block;
+    background:rgb(230,230,230);
+    border: 1px solid rgb(220,220,220);
+    color:rgb(85,85,85);
+	padding:15px;
+	font-size:10pt;
+	text-transform:uppercase;
+	line-height:100%;
+}
+div.prevnext span {
+	opacity:0.50;
+	filter:alpha(opacity=50);
+}
+
+
+
+
+
+
+
+
+
+/**** DIRECTORY ****/
+
+a.dirtitle {
+	font-size:12pt;
+	font-family:Arial;
+	display:block;
+	font-weight:bold;
+	max-width:700px;
+	min-width:400px;
+}
+
+div.dirby {
+	font-size:8pt;
+	display:block;
+	padding:0 0 15px 0;
+	color:rgb(85,85,85);
+	line-height:175%;
+	max-width:900px;
+	min-width:400px;
+}
+
+div.dirby a {
+	color:rgb(0,128,128);
+}
+
+
+div.dirby a:hover {
+	color:rgb(0,170,85);
+}
+
+
+
+/*** ETML ***/
+
+
+em {
+	padding:1px;
+	background:rgb(240,240,255);
+	color:rgb(0,0,85);
+	font-weight:bold;
+	font-size:10pt;
+	font-style:normal;
+}
+
+
+
+table.simple {
+	margin:0;
+	padding:0;
+	border-top:1px solid rgb(213,213,213);
+	border-left:1px solid rgb(213,213,213);
+}
+
+
+
+table.simple td {
+	font-size:10pt;	
+	border-bottom:1px solid rgb(213,213,213);
+	border-right:1px solid rgb(213,213,213);
+	margin:0;
+	padding:4px;
+}
+
+
+/* code sample */
+tt {
+	display:block;
+	font-size:10pt;
+	border:1px solid rgb(170,170,213);
+	background:rgb(240,240,255);
+	margin:0;
+	padding:10px;
+	line-height:160%;
+}
+
+
+
+
+
+.search input {
+	font-size:14pt;font-family:Arial;padding:5px;
+}
+
+
+#popc .table.inform.simpleform .toprow {
+	display:none;
+}
+
+#popc .table.inform.simpleform .row {
+	padding:3px 0;
+}
+
+#popc .table.inform.simpleform .row .help,
+#popc .table.inform.simpleform .row .field {
+	margin-left:10px;
+}
+
+
+
+
+ 
+
+.bb .likebox {
+	float:left;
+	display:block;
+	width:70px;
+	padding:7px 0;
+	margin-right:10px;
+	background:rgb(245,245,245);
+	border-radius:2px;
+	text-align:center;
+	line-height:100%;
+}
+
+
+.bb .likebox b {
+	display:block;
+	text-align:center;
+	margin-bottom:1px;
+	color:rgb(85,85,85);
+	
+}
+
+.bb .likebox a {
+	font-size:10px;
+	color:rgb(0,170,0);
+}
+
+
+
+
+
+

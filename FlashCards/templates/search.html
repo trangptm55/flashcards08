@@ -1,0 +1,64 @@
+{% extends 'base_home.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}item.css" type="text/css"/>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}jquery.highlight-3.js"></script>
+    <style type="text/css">
+        .highlight { font-weight:bold; }
+    </style>
+{% endblock %}
+{% block main %}
+    <h1><a href="/dir">Flashcards</a> › {{ subj.name|title }}</h1>
+
+
+    <div class="tr lesson">
+        {% include "main/dir_side_menu.html" %}
+
+        <div class="content">
+            <div class="sectionbody">
+                <form method="get" class="search">
+                    <input type="text" name="q" id="q" size="50" value="{{ query }}"> <input type="submit" value="Search">
+                </form>
+            </div>
+
+            <div class="table bb" style="width:100%">
+                {% for FC in FCs.object_list %}
+                    <div class="row" style="width:100%">
+
+                        <div class="likebox">
+                            <b id="likes">{{ FC.Flashcard.like.count }}</b>
+                            <a href="javascript:" id="likelink">Like{{ FC.Flashcard.like.count|pluralize }}</a>
+                        </div>
+
+                        <a href="/show/{{ FC.Flashcard.flashcard_id|escape }}"
+                           class="title">{{ FC.Flashcard.title }}</a>
+
+                        <div class="byline">
+                            <a href="/app/?u={{ FC.owner.username }}" class="author">{{ FC.owner.first_name }}</a>
+                            · {{ FC.Flashcard.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="section sectionoff prevnext">
+                <div class="sectionbody">
+                    {% if FCs.has_previous %}
+                        <a href="?page={{ FCs.previous_page_number  }}" class="prev">« Prev</a>
+                    {% endif %}
+                    {% if FCs.has_next %}
+                        <a href="?page={{ FCs.next_page_number }}" class="next">Next »</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var str = $('#q').val().split(" ");
+        $(function(){
+            for(var i=0; i<str.length; i++){
+                $('.bb .title').highlight(str[i]);
+            }
+        });
+    </script>
+{% endblock %}

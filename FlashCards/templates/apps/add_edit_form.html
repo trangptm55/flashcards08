@@ -1,0 +1,45 @@
+{% extends "base_iframe.html" %}
+{% block content %}
+    <form method="post" action=".?action={{ action }}" id="inform">{% csrf_token %}
+    <div class="table inform squish">
+        <div class="toprow"><div class="title">{{ title }}</div></div>
+    {% for form in title_form %}
+        {% ifequal form.label '' %}
+        {{ form }}
+        {% else %} {% ifequal form.label title_form.is_public.label%}
+        <div class="row alt checkbox  ">
+            <div class="name">&nbsp;</div>
+            <div class="field">
+                {{ form }}
+                <label for="id_is_public">{{ form.label }}</label>
+            </div>
+        </div>
+        {% else %}
+        <div class="row {% if form.errors %}error{% endif %}">
+            <div class="name ">{{ form.label }}</div>
+            <div class="field" style="">{{ form }}</div>
+            <div class="help">{% for error in form.errors %}{{ error }}{% endfor %}</div>
+        </div>
+        {% endifequal %}{% endifequal %}
+    {% endfor %}
+    </div>
+    <div class="table inform squish">
+        <div class="toprow"><div class="title">Prompt / Answer</div></div>
+    {% for form in prompt_form %}
+        {% cycle '<div class="multirow">' '' %}
+            <div class="row alt text ">
+                <div class="name ">{{ form.label }}</div>
+                <div class="field" style="">{{ form }}</div>
+            </div>
+        {% cycle '' '</div>' %}
+    {% endfor %}
+        <div class="row alt submit">
+            <div class="name">&nbsp;</div>
+            <div class="field">
+                <input type="submit" name="submit" value="Submit" id="formsubmit" class="submit">
+                <input type="button" value="Cancel" onclick="history.go(-1)" class="submit">
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock %}

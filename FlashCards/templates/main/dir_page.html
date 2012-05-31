@@ -1,0 +1,38 @@
+{% extends 'base_home.html' %}
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}item.css" type="text/css"/>{% endblock %}
+{% block main %}
+    <h1><a href="/dir">Flashcards</a> › Flashcards: Free flashcards to help you study</h1>
+
+    <div class="tr lesson">
+        {% include "main/dir_side_menu.html" %}
+
+        <div class="content">
+            <div class="section">
+                <div class="sectionbody">
+                    <form method="get" class="search">
+                        <input type="text" name="q" id="q" size="50" value=""> <input type="submit" value="Search">
+                    </form>
+                </div>
+
+                <div class="sectionbody">
+                    {% for FCset in FC_set %}
+                        <div style="display:block;float:left;width:300px;padding:0 10px 10px 0;height:220px;line-height:100%">
+                            <a href="/dir/{{ FCset.subject.value }}"
+                               style="display:block;width:300px;padding:3px 0;font-weight:bold;font-size:12pt;">{{ FCset.subject.name }}</a>
+                            {% for FC in FCset.flashcard %}
+                                <div style="margin:0;text-indent:0;font-size:10pt;padding:6px 0;">
+                                    <b class="likecount">{{ FC.like.count }}</b>
+                                    <a href="/show/{{ FC.flashcard_id }}"> {{ FC.title }}</a>
+                                </div>
+                            {% endfor %}
+                            <a href="/dir/{{ FCset.subject.value }}"
+                               style="font-size:10pt;display:block;padding:6px 0;">› See all
+                                in {{ FCset.subject.name }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

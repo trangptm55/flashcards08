@@ -1,0 +1,22 @@
+{% extends "base_home.html" %}
+{% block main %}
+    <h1><a href="/user">Account</a> &rsaquo; {{ action|title }}</h1>
+
+    <div class="tr">
+
+        <div class="sidetools sideup">
+            <a href="/user/?action=picture"><img src="{{ avatar }}" class="sidepic"/></a>
+            <div class="table">
+                <a href="/user/?action=account" class="row {% ifequal action 'account' %}active{% endifequal %}">
+                    <img src="{{ STATIC_PREFIX }}i/icons/setting.png" class="upic">Account				</a>
+                <a href="/user/?action=picture" class="row {% ifequal action 'pic' %}active{% endifequal %}">
+                    <img src="{{ STATIC_PREFIX }}i/icons/photo.png" class="upic">Picture				</a>
+            </div>
+        </div>
+
+        <div style="position:absolute;left:200px;top:90px;right:0;bottom:0;z-index:2">
+            <iframe src="/iframe/{{ action }}" id="appframe" border="0" frameborder="0"></iframe>
+        </div>
+
+    </div>
+{% endblock %}

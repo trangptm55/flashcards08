@@ -1,0 +1,16 @@
+Hello {{ name }}
+
+You've requested us to reset your account's password
+
+Username: {{ username }}
+New Password: {{ password }}
+
+We recommend you to visit below link to change your password
+{{ host }}/user/?action=account
+
+Thank You,
+Engrade Support
+
+
+*********************
+DO NOT REPLY TO THIS EMAIL

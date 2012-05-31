@@ -1,0 +1,24 @@
+{% extends "base_index.html" %}
+{% block title %}User Login{% endblock %}
+{% block head %}User Login{% endblock %}
+{% block content %}
+{% if form.has_errors %}
+<p>Your username and password didn't match.
+    Please try again.</p>
+{% endif %}
+<form method="post" action="." id='inform'>{% csrf_token %}
+    <div class='table inform smallform'>
+        {% include 'forms.html' %}
+        <div class="row  submit">
+            <div class="name"> </div>
+            <div class="field"> <input class="submit" type="submit" value="Submit" /></div>
+        </div>
+    </div>
+</form>
+<div class="table center" style="width:450px;">
+    <a href="/accounts/lost">Forgot Password?</a>
+</div>
+<script type="text/javascript">
+    document.getElementById('id_username').focus()
+</script>
+{% endblock %}

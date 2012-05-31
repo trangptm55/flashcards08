@@ -1,0 +1,11 @@
+Hello {{ name }}
+
+Thank you so much for signing up with Engrade. Your account has been created and your login information is:
+
+Username: {{ username }}
+Login: {{ host }}/accounts/login
+
+If you ever forget your password, you can reset it here:
+{{ host }}/accounts/lost
+
+Remember, almost all of our members find us through word of mouth, so please make sure to share Engrade with your fellow teachers and administrators!'

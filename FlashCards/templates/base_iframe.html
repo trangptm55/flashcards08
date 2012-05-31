@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<html>
+<head>
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}global.css" type="text/css"/>
+    <script type="text/javascript">
+        function fieldjump(obj, e) {
+            var keynum = (window.event) ? e.keyCode : e.which;
+            var y = 0;
+
+            if (keynum == 38) y = -1; // up
+            if (keynum == 40) y = 1; // down
+            if (keynum == 13) y = 1; // return
+
+            if (y !== 0) {
+                var here = 0;
+                for (var i = 0; i < obj.form.elements.length; i++) {
+                    if (obj.form.elements[i].id == obj.id) here = i;
+                }
+
+                var next = here + y;
+                if ((next > -1) && (obj.form.elements[next])) {
+                    obj.form.elements[next].focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base_iframe.html" %}
+{% block content %}
+<!-- Upload form. Note enctype attribute! -->
+<form id='inform' method="post" enctype="multipart/form-data">{% csrf_token %}
+    <div class="table inform">
+        <div class="toprow"><div class="title">Upload Picture</div></div>
+
+        <div class="row alt text {% if form.errors %}error{% endif %}">
+            <div class="name"><img src="{{ avatar }}" style="width:100px"></div>
+            <div class="field">{{ form.docfile }}</div>
+            <div class="help">
+            {% if form.errors %}{% for error in form.docfile.errors %}{{ error }}{% endfor %}
+            {% else %}Select a gif, jpg, or png file less than 8Mb{% endif %}
+            </div>
+        </div>
+
+
+        <div class="row alt submit">
+            <div class="name">&nbsp;</div>
+            <div class="field">
+                <input type="submit" name="submit" value="Submit" id="formsubmit" class="submit">
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base_home.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_PREFIX }}item.css" type="text/css"/>{% endblock %}
+{% block main %}
+    <h1><a href="/dir">Flashcards</a> › {{ FC.title }}</h1>
+    <div class="tr lesson">
+
+        <div class="sidetools sideup">
+
+            <div class="table creator">
+                <div class="row">
+                    <a href="/app/?u={{ owner.username }}"><img src="{{ creator_avatar }}" class="upic"></a>
+                    <a href="/app/?u={{ owner.username }}" class="creator">{{ owner.first_name }}</a>
+
+                    <div id="likewidget" class="likes ">
+                        <b id="likes" class="likecount">{{ like_no }}</b>
+                        {% if like %}<a class="like" href="/like/{{ flashcard.id }}"
+                                        onmouseover="this.innerHTML=' Like this'" onmouseout="this.innerHTML=' Likes'">
+                            Like{{ like_no|pluralize }}</a>
+                        {% else %}Like{{ like_no|pluralize }}{% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="table">
+                <div class="midrow">Options</div>
+                {% if user.is_authenticated %}
+                    {% if is_owner %}
+                        <a href="#" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic"> Copy
+                            Flashcards</a>
+                        <a href="/app/?id={{ FC.flashcard_id|escape }}&action=edit" class="row small"><img
+                                src="{{ STATIC_PREFIX }}i/icons/setting.png" class="upic"> Edit Flashcards</a><br>
+                        <a href="javascript:if (confirm('Are you sure you wish to delete these flashcards?'))
+                    window.location.replace('/iframe/form/?action=delete&id={{ FC.flashcard_id|escape }}&delete=1');void(0)"
+                           class="row small"><img src="{{ STATIC_PREFIX }}i/icons/delete.png" class="upic"> Delete
+                            Flashcards</a>
+                    {% else %}
+                        <a href="#" class="row small"><img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic"> Copy
+                            Flashcards</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+
+            <div class="table">
+                <a href="/app/?u={{ user.username }}" class="midrow">More from {{ username }}</a>
+                {% for fc in oFCs %}
+                    <a href="/show/{{ fc.Flashcard.flashcard_id }}"
+                       class="row small {% ifequal fc.Flashcard FC %}active{% endifequal %}">
+                        <img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic">
+                        {{ fc.Flashcard.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="content">
+            <input type="hidden" id="hiddenprompt" name="variable" value="{{ flashcard.p }}">
+            <input type="hidden" id="hiddenanswer" name="variable" value="{{ flashcard.a }}">
+
+            <script type="text/javascript" src="/static/display.js"></script>
+        </div>
+    </div>
+{% endblock %}

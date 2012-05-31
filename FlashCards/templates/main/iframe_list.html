@@ -1,0 +1,13 @@
+{% extends "base_iframe.html" %}
+{% block content %}
+    <div class="options">
+        <a href="/iframe/form/?action=add"><img src="{{ STATIC_PREFIX }}i/icons/add.png" class="upic"> Create New Flashcards</a>
+        <a href="/dir" target="_top"><img src="{{ STATIC_PREFIX }}i/icons/copy.png"
+                                                                    class="upic"> All Flashcard </a>
+    </div>
+    <div class="table">
+        <div class="toprow">Flashcards</div>
+        <div class="midrow">My Flashcards</div>
+        {% include 'apps/flashcard_list.html' %}
+    </div>
+{% endblock %}

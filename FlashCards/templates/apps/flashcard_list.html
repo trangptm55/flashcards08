@@ -1,0 +1,24 @@
+{% for flashcard in flashcards %}
+<div class="row">
+    <a href="/show/{{ flashcard.Flashcard.flashcard_id|escape }}" class="name" target="_top">
+        <img src="{{ STATIC_PREFIX }}i/icons/copy.png" class="upic">{{ flashcard.Flashcard.title|escape }}</a>
+
+    <div class="ops" style="width:250px">
+        <ul>
+            <li><img src="{{ STATIC_PREFIX }}i/icons/setting.png"></li>
+            <ul>
+                <!--<li><a href="#">Assign to Class(es)</a></li>
+                <li><a href="#">Add User(s)</a></li>-->
+                <li><a href="/iframe/form/?action=edit&id={{ flashcard.Flashcard.flashcard_id|escape }}">Edit
+                    Flashcards</a></li>
+                <li>
+                    <a href="javascript:if (confirm('Are you sure you wish to delete these flashcards?'))
+                    window.location.replace('/iframe/form/?action=delete&id={{ flashcard.Flashcard.flashcard_id|escape }}&delete=1');void(0)">
+                        Delete Flashcards</a></li>
+            </ul>
+        </ul>
+    </div>
+</div>
+{% empty %}
+<p class="row">No Flashcards found.</p>
+{% endfor %}

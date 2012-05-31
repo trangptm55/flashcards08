@@ -1,0 +1,35 @@
+<div class="sidetools sideup">
+
+    <div class="table">
+        <div class="toprow">Options</div>
+        {% if user.is_authenticated %}
+            <a href="/app/?action=add" class="row"><img src="{{ STATIC_PREFIX }}i/icons/add.png"> Create Flashcards</a>
+        {% else %}
+            <div class="row small">
+                Create and share free online flashcards for your classroom in just minutes:
+                <a href="/accounts/register" style="font-weight:bold;color:rgb(0,128,0)">Signup</a> or <a
+                    href="/accounts/login" style="font-weight:bold;color:rgb(0,128,0)">Login</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="table">
+        <div class="toprow">Find Flashcards</div>
+        <a href="/dir/all"
+           class="row {% if 0|stringformat:"s" == subj.value|stringformat:"s" %}active{% endif %} lopad">All Subjects<a>
+            {% for m in menu %}
+                <a href="/dir/{{ m.value }}" class="row
+
+
+
+
+
+
+
+
+
+                        {% if m.value|stringformat:"s" == subj.value|stringformat:"s" %}active{% endif %} lopad">{{ m.name }}</a>
+            {% endfor %}
+            <!--<a href="/app" class="row lopad">Top Flashcards Makers</a>-->
+    </div>
+</div>
